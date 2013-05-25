@@ -33,6 +33,10 @@ Function Reference
 **getObjectiveName(objectiveID [,language])** - Gets a single objective's name  
 **getMatchDetails(matchID)** - Get the details of a single match  
 
+Added: 
+getMatchDetailsBorder(matchID, border)
+
+
 ###Item and Recipe API
 **getItems()** - Gets a list of all item IDs  
 **getItemDetails(itemID [,language])** - Gets a single item's details  

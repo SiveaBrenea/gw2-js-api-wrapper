@@ -310,3 +310,28 @@ getRecipeDetails = function(recipeID) {
   });
   return data;
 };
+
+getMatchDetailsBorder = function(matchID, border) {
+  var data;
+  var databorder;
+  var objectivesborder;
+   
+  data = null;
+  $.ajax({
+    url: "https://api.guildwars2.com/v1/wvw/match_details.json",
+    type: "get",
+    dataType: "json",
+    async: false,
+    data: {
+      match_id: matchID
+    }
+  }).done(function(d) {
+	//Get Border data
+	databorder = d.maps[border];
+	//get every objectives from taht border.
+	objectivesborder = databorder.objectives; 
+
+    return data = objectivesborder;
+  });
+  return data;
+};
